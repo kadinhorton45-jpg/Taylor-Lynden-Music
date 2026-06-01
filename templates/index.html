@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Taylor Lynden - Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Taylor Lynden</h1>
+        <p class="hero-subtitle">From Vermont Dreams to Pop Superstar</p>
+        <p class="hero-description">Explore the complete musical journey of Taylor Lynden across 8 studio albums, countless collaborations, and unforgettable moments.</p>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3 id="total-albums">0</h3>
+                <p>Albums</p>
+            </div>
+            <div class="stat">
+                <h3 id="total-tracks">0</h3>
+                <p>Tracks</p>
+            </div>
+            <div class="stat">
+                <h3 id="career-span">0</h3>
+                <p>Years Active</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="latest-releases">
+    <div class="container">
+        <h2>Latest Releases</h2>
+        <div class="albums-grid" id="latest-albums">
+            <!-- Populated by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<section class="highlights">
+    <div class="container">
+        <h2>Career Highlights</h2>
+        <div class="highlights-grid" id="milestones-container">
+            <!-- Populated by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<section class="collaborations-preview">
+    <div class="container">
+        <h2>Notable Collaborations</h2>
+        <div class="collabs-grid" id="collabs-container">
+            <!-- Populated by JavaScript -->
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}

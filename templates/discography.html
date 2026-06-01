@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Taylor Lynden - Complete Discography{% endblock %}
+
+{% block content %}
+<section class="discography-header">
+    <div class="container">
+        <h1>Complete Discography</h1>
+        <p>All studio albums, EPs, and singles from Taylor Lynden's career</p>
+    </div>
+</section>
+
+<section class="discography-content">
+    <div class="container">
+        <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">All Releases</button>
+            <button class="filter-btn" data-filter="album">Albums</button>
+            <button class="filter-btn" data-filter="ep">EPs</button>
+        </div>
+        <div class="discography-list" id="discography-list">
+            <!-- Populated by JavaScript -->
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/discography.js') }}"></script>
+{% endblock %}

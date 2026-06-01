@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Taylor Lynden - Career Story{% endblock %}
+
+{% block content %}
+<section class="career-intro">
+    <div class="container">
+        <h1>The Career Story of Taylor Lynden</h1>
+        <p class="intro-text">From picking up random objects that made beautiful sounds at age 5 to becoming a pop superstar, Taylor Lynden's journey is one of passion, determination, and artistic evolution.</p>
+    </div>
+</section>
+
+<section class="career-timeline">
+    <div class="container">
+        <h2>Major Career Milestones</h2>
+        <div class="timeline" id="career-timeline">
+            <!-- Populated by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<section class="eras-section">
+    <div class="container">
+        <h2>Album Eras</h2>
+        <div class="eras-container" id="eras-container">
+            <!-- Populated by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<section class="influences-collaborators">
+    <div class="container">
+        <div class="two-column">
+            <div class="column">
+                <h3>Musical Influences</h3>
+                <ul>
+                    <li>The Spice Girls (Wannabe)</li>
+                    <li>Tim McGraw (Its Your Love)</li>
+                    <li>Britney Spears</li>
+                    <li>Nelly Furtado</li>
+                    <li>Jennifer Lopez</li>
+                    <li>Taylor Swift</li>
+                    <li>Post Malone</li>
+                    <li>Kendrick Lamar</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Key Collaborators</h3>
+                <ul id="collaborators-list">
+                    <!-- Populated by JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/career.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Album Detail{% endblock %}
+
+{% block content %}
+<section class="album-detail" id="album-detail">
+    <div class="container">
+        <div class="album-hero" id="album-hero">
+            <!-- Populated by JavaScript -->
+        </div>
+        <div class="album-content">
+            <div class="album-main">
+                <section class="tracklist">
+                    <h2>Tracklist</h2>
+                    <div class="tracks" id="tracks-container">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </section>
+            </div>
+            <aside class="album-sidebar">
+                <div class="album-info" id="album-info">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/album_detail.js') }}"></script>
+{% endblock %}

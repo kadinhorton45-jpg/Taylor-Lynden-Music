@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Taylor Lynden - Complete Timeline{% endblock %}
+
+{% block content %}
+<section class="timeline-header">
+    <div class="container">
+        <h1>Complete Timeline</h1>
+        <p>Every major moment in Taylor Lynden's career from 1991 to present</p>
+    </div>
+</section>
+
+<section class="timeline-content">
+    <div class="container">
+        <div class="timeline-controls">
+            <input type="text" id="timeline-search" placeholder="Search timeline events..." class="search-input">
+            <select id="category-filter" class="category-filter">
+                <option value="all">All Events</option>
+                <option value="achievement">Achievements</option>
+                <option value="collaboration">Collaborations</option>
+                <option value="personal">Personal</option>
+                <option value="career">Career</option>
+            </select>
+        </div>
+        <div class="full-timeline" id="full-timeline">
+            <!-- Populated by JavaScript -->
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/timeline.js') }}"></script>
+{% endblock %}
